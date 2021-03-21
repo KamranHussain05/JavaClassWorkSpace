@@ -43,9 +43,9 @@ public class StringToolBoxTester {
 		System.out.println("Albert Einstein = " + stringTool.convertName("Einstein, Albert"));
 		
 		System.out.println("****Testing: String removeDashes(String s)***");
-		System.out.println(" = " + stringTool.removeDashes(""));
+		System.out.println("987-65-4321 = " + stringTool.removeDashes("987-65-4321"));
 		
-		System.out.println("*****Testing: String dateStr(String s)***");
+//		System.out.println("*****Testing: String dateStr(String s)***");
 		
 		//MENU
 //		Scanner kboard = new Scanner(System.in);

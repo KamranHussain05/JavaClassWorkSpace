@@ -96,6 +96,9 @@ public class StringToolBox {
 	
 	public String removeDashes(String s) {
 		String result = "";
+		int index = 0;
+		
+		
 		
 		return result;
 	}
