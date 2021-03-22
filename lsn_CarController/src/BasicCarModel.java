@@ -1,12 +1,8 @@
 
 public class BasicCarModel
 {
-//   public String myMoveState;
-//   public String myCarName;
-   
-   private String myMoveState;
-   private String myCarName;
-   
+   public String myMoveState;
+   public String myCarName;
    
    public BasicCarModel(String name)
    {

@@ -4,7 +4,7 @@ public class CarController
 
    public static void main(String[] args)
    {
-      // working with hte basic model
+      // working with the basic model
       
       System.out.println("Instantiating a new car");
       BasicCarModel car1 = new BasicCarModel("Mr. Taylor's Kia");
@@ -27,5 +27,4 @@ public class CarController
       System.out.println(car1.getCarName() + " move state is " + car1.getMoveState());
 
    }
-
 }
