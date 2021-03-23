@@ -42,10 +42,27 @@ public class StringToolBoxTester {
 		System.out.println("***Testing: String convertName(String s)***");
 		System.out.println("Albert Einstein = " + stringTool.convertName("Einstein, Albert"));
 		
-		System.out.println("****Testing: String removeDashes(String s)***");
-		System.out.println("987-65-4321 = " + stringTool.removeDashes("987-65-4321"));
+		//Added Part 2 Tester, For method functional testing, menu is final version
 		
-//		System.out.println("*****Testing: String dateStr(String s)***");
+		System.out.println("****Testing: String removeDashes(String s)***");
+		System.out.println("987654321 = " + stringTool.removeDashes("987-65-4321"));
+		
+		System.out.println("*****Testing: String dateStr(String s)***");
+		System.out.println("31-05-2019 = " + stringTool.dateStr("3/31/2019"));
+		
+		System.out.println("*****Testing: String negativeBits(String s)***");
+		System.out.println("01010 = " + stringTool.negativeBits("10101"));
+		
+		System.out.println("*****Testing: boolean containsSameChar(String s");
+		System.out.println("true = " + stringTool.containsSameChar("cccccc"));
+		System.out.println("false = " + stringTool.containsSameChar("Cccccc"));
+		System.out.println("false = " + stringTool.containsSameChar("vbnnnnn"));
+		
+		System.out.println("*****Testing: String removeComments(String s)");
+		System.out.println("Hello, this is an string with embedded comment indicators = " + stringTool.removeComments("Hello, this is an /* input /* string with embedded comment indicators"));
+		
+		
+		
 		
 		//MENU
 //		Scanner kboard = new Scanner(System.in);

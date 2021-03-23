@@ -96,15 +96,22 @@ public class StringToolBox {
 	
 	public String removeDashes(String s) {
 		String result = "";
-		int index = 0;
+		String firstSubString = "";
+		String secondSubString = "";
+		String thirdSubString = "";
 		
+		firstSubString = s.substring(0, s.indexOf("-"));
+		secondSubString =  s.substring(s.indexOf("-")+1, s.lastIndexOf("-"));
+		thirdSubString = s.substring(s.indexOf("-")+4);
 		
-		
+		result = firstSubString +secondSubString + thirdSubString;
 		return result;
 	}
 	
 	public String dateStr(String s) {
 		String result = "";
+		
+		
 		
 		return result;
 	}
