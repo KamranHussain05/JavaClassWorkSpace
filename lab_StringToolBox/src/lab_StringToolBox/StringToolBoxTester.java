@@ -60,7 +60,7 @@ public class StringToolBoxTester {
 		System.out.println("false = " + stringTool.containsSameChar("vbnnnnn"));
 		
 		System.out.println("*****Testing: String removeComments(String s)");
-		System.out.println("Hello, this is an string with embedded comment indicators = " + stringTool.removeComments("Hello, this is an /* input /* string with embedded comment indicators"));
+		System.out.println("Hello, this is an  string with embedded comment indicators = " + stringTool.removeComments("Hello, this is an /* input /* string with embedded comment indicators"));
 		
 		
 		

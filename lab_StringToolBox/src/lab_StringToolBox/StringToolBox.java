@@ -136,16 +136,20 @@ public class StringToolBox {
 		boolean result = false;
 		String comparison = s;
 		int test = 0;
+		int length = 0;
 		
-		result = s.equals(comparison);
-		
+		comparison = s.substring(1,1);
+		length = comparison.length();  
+		test  = s.inexOfAny(comparison);
 		return result;
 	}
 	
 	public String removeComments(String s) {
 		String result = "";
+		String comment = "";
 		
-		result = s.replace("/*", "");
+		comment = s.substring(s.indexOf("/*"), s.lastIndexOf("/*")+2);
+		result = s.replace(comment, "");
 		
 		
 		return result; 
