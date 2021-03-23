@@ -48,7 +48,8 @@ public class StringToolBoxTester {
 		System.out.println("987654321 = " + stringTool.removeDashes("987-65-4321"));
 		
 		System.out.println("*****Testing: String dateStr(String s)***");
-		System.out.println("31-05-2019 = " + stringTool.dateStr("3/31/2019"));
+		System.out.println("31-05-2019 = " + stringTool.dateStr("05/31/2019"));
+		System.out.println("03-05-2019 = " + stringTool.dateStr("5/3/2019"));
 		
 		System.out.println("*****Testing: String negativeBits(String s)***");
 		System.out.println("01010 = " + stringTool.negativeBits("10101"));

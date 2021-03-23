@@ -96,34 +96,48 @@ public class StringToolBox {
 	
 	public String removeDashes(String s) {
 		String result = "";
-		String firstSubString = "";
-		String secondSubString = "";
-		String thirdSubString = "";
 		
-		firstSubString = s.substring(0, s.indexOf("-"));
-		secondSubString =  s.substring(s.indexOf("-")+1, s.lastIndexOf("-"));
-		thirdSubString = s.substring(s.indexOf("-")+4);
-		
-		result = firstSubString +secondSubString + thirdSubString;
+		result = s.replace("-", "");
+
 		return result;
 	}
 	
 	public String dateStr(String s) {
 		String result = "";
+		String removeSlashes = "";
+		String month = "";
+		String day = "";
+		String year = "";
 		
-		
-		
+		month = s.substring(0, s.indexOf("/"));
+			if (month.length() < 2) {
+				month = "0" + month;
+			}
+		removeSlashes = s.replace("/", "-");
+		day = removeSlashes.substring(s.indexOf("/")+1, s.lastIndexOf("/")+1);
+			if(day.length() < 3) {
+				day = "0" + day;
+			}
+		year = removeSlashes.substring(s.lastIndexOf("/"));
+		result = day + month + year;
+	
 		return result;
 	}
 	
 	public String negativeBits(String s) {
 		String result = "";
 		
+		result = s.replace("0", "2").replace("1", "0").replace("2", "1");
+		
 		return result;
 	}
 	
 	public boolean containsSameChar(String s) {
 		boolean result = false;
+		String comparison = s;
+		int test = 0;
+		
+		result = s.equals(comparison);
 		
 		return result;
 	}
@@ -131,7 +145,10 @@ public class StringToolBox {
 	public String removeComments(String s) {
 		String result = "";
 		
-		return result;
+		result = s.replace("/*", "");
+		
+		
+		return result; 
 	}
 	
 	//*******Part 3*******
