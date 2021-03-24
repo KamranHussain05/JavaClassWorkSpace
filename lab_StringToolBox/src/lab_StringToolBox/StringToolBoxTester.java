@@ -77,7 +77,10 @@ public class StringToolBoxTester {
 		System.out.println("false = " + stringTool.validPassword("SNOWFLAKE47"));
 		System.out.println("true = " + stringTool.validPassword("snowFlake47"));
 		
-		System.out.println("*****Testing: ");
+		System.out.println("*****Testing: boolean passwordEncrypter(String s)");
+		System.out.println("false = " + stringTool.validPassword("Snowflake"));
+		System.out.println("false = " + stringTool.validPassword("SNOWFLAKE47"));
+		System.out.println("true = " + stringTool.validPassword("snowFlake47"));
 		
 		//MENU
 //		Scanner kboard = new Scanner(System.in);
