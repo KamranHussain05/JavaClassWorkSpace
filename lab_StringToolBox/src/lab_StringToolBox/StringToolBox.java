@@ -170,4 +170,10 @@ public class StringToolBox {
 		
 		return result;
 	}
+	
+	public boolean passwordEncrypter(String s) {
+		boolean result = false;
+		
+		return result;
+	}
 }

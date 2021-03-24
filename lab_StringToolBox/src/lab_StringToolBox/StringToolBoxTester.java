@@ -60,10 +60,24 @@ public class StringToolBoxTester {
 		System.out.println("false = " + stringTool.containsSameChar("vbnnnnn"));
 		
 		System.out.println("*****Testing: String removeComments(String s)");
-		System.out.println("Hello, this is an  string with embedded comment indicators = " + stringTool.removeComments("Hello, this is an /* input /* string with embedded comment indicators"));
+		System.out.println("Hello, this is an  string with embedded comment indicators = " + stringTool.removeComments("Hello, this is an /* input /* string with embedded comment indicators"));    
 		
+		//Added Part 3 tester, For method functional testing, menu is final tester
 		
+		System.out.println("*****Testing: String caesar(String s)");
+		System.out.println("Ymj udlrd mnuut nx f wjhqzxnaj fsi sthyzwsfq fsnrfq sfynaj yt Bjxyjws Fkwnhf = " + stringTool.caesar("The pygmy hippo is a reclusive and nocturnal animal native to Western Africa”"));
 		
+		System.out.println("*****Testing: boolean isPalindrome(String s)");
+		System.out.println("true = " + stringTool.isPalindrome("racecar"));
+		System.out.println("false = " + stringTool.isPalindrome("bananas"));
+		System.out.println("true = " + stringTool.isPalindrome("madam"));
+		
+		System.out.println("*****Testing: boolean validPassword(String s)");
+		System.out.println("false = " + stringTool.validPassword("Snowflake"));
+		System.out.println("false = " + stringTool.validPassword("SNOWFLAKE47"));
+		System.out.println("true = " + stringTool.validPassword("snowFlake47"));
+		
+		System.out.println("*****Testing: ");
 		
 		//MENU
 //		Scanner kboard = new Scanner(System.in);
