@@ -134,13 +134,9 @@ public class StringToolBox {
 	
 	public boolean containsSameChar(String s) {
 		boolean result = false;
-		String comparison = s;
-		int test = 0;
-		int length = 0;
 		
-		comparison = s.substring(1,1);
-		length = comparison.length();  
-		test  = s.inexOfAny(comparison);
+		result = s.replaceAll("" + s.charAt(0), "").length() == 0;
+
 		return result;
 	}
 	
