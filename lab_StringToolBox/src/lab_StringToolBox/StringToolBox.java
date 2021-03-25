@@ -178,6 +178,22 @@ public class StringToolBox {
 	
 	public boolean validPassword(String s) {
 		boolean result = false;
+		boolean hasEnoughChars = false;
+		int length = 0;
+		boolean hasSpace = false;
+		int space= 0;
+		boolean hasNum = false;
+		
+		length = s.length();
+		space = s.indexOf(" ");
+		hasNum = containsSameChar(s);
+		if(length >=7 && space != 0) {
+			hasEnoughChars = true;
+			hasSpace = true;
+			hasNum = true;
+		}
+		
+		
 		
 		return result;
 	}
