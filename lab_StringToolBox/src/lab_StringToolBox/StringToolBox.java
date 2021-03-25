@@ -161,8 +161,19 @@ public class StringToolBox {
 	
 	public boolean isPalindrome(String s) {
 		boolean result = false;
+		String reversed = "";
+		String original = s;
 		
-		return false;
+		StringBuilder reverseChars = new StringBuilder();
+		reverseChars.append(s);
+		reverseChars.reverse();
+		reversed = reverseChars.toString();
+		
+		if(original.equals(reversed)) {
+			result = true;
+		}
+		
+		return result;
 	}
 	
 	public boolean validPassword(String s) {
