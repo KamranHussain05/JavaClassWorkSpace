@@ -179,21 +179,36 @@ public class StringToolBox {
 	public boolean validPassword(String s) {
 		boolean result = false;
 		boolean hasEnoughChars = false;
-		int length = 0;
 		boolean hasSpace = false;
-		int space= 0;
 		boolean hasNum = false;
-		
-		length = s.length();
-		space = s.indexOf(" ");
-		hasNum = containsSameChar(s);
-		if(length >=7 && space != 0) {
+		boolean hasUpperAndLower = false;
+
+		//Testing if 7 or more characters
+		if(s.length() >= 7) {
 			hasEnoughChars = true;
-			hasSpace = true;
-			hasNum = true;
 		}
 		
+		//Testing for spaces
+		if(s.indexOf(" ") != 0) {
+			hasSpace = true;
+		}
 		
+		//Testing for numbers
+	    for (int i = 0; i>s.length()-1; i++) {
+	    	s.contains("1");
+	    	while(s.length()>0) {
+	    		s.replace("num", "2");
+	    	}
+	    }
+	    
+		//Testing for upper and lower case letters
+		
+		
+		//Final boolean tests
+		
+		if(hasEnoughChars == true && hasSpace == false && hasNum == true && hasUpperAndLower == true) {
+			result = true;
+		}
 		
 		return result;
 	}
