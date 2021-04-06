@@ -87,7 +87,7 @@ public class StringToolBox {
 		String result = "";
 		
 		lastName = s.substring(0, s.indexOf(","));
-		firstName = s.substring(s.indexOf(" "));
+		firstName = s.substring(s.indexOf(" ") + 1);
 		result = firstName + " " + lastName;
 		return result;
 	}
@@ -143,18 +143,39 @@ public class StringToolBox {
 	public String removeComments(String s) {
 		String result = "";
 		String comment = "";
+		String test = s;
 		
-		comment = s.substring(s.indexOf("/*"), s.lastIndexOf("/*")+2);
-		result = s.replace(comment, "");
-		
+		if(test.contains("/*")) {
+			comment = s.substring(s.indexOf("/*"), s.lastIndexOf("/*")+2);
+			result = s.replace(comment, "");
+		} else return s;
 		
 		return result; 
 	}
 	
 	//*******Part 3*******
 	
-	public String caesar(String s) {
+	public String caesar(String s, int n) {
 		String result = "";
+		String lowerComp = "abcdefghijklmnopqrstuvwxyz";
+		String upperComp = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		
+		if(n < 0) {
+			n = n+26;
+		}
+		
+		for (int i = 0; i < s.length(); i++) {
+			int index = 0;
+			char chr = s.charAt(i);
+			
+			if(Character.isLowerCase(chr)) {
+				index = (lowerComp.indexOf(chr) + n)%26;
+				chr= lowerComp.charAt(index);
+			} else if(Character.isUpperCase(chr)) {
+				index = (upperComp.indexOf(chr) + n)%26;
+				chr = upperComp.charAt(index);
+			} result += chr;
+		}
 		
 		return result;
 	}
@@ -178,37 +199,40 @@ public class StringToolBox {
 	
 	public boolean validPassword(String s) {
 		boolean result = false;
-		boolean hasEnoughChars = false;
-		boolean hasSpace = false;
-		boolean hasNum = false;
-		boolean hasUpperAndLower = false;
+		int chars = 0;
+		int spaces = 0;
+		int upperCount = 0;
+		int lowerCount = 0;
+		int digits = 0;
 
-		//Testing if 7 or more characters
-		if(s.length() >= 7) {
-			hasEnoughChars = true;
-		}
-		
-		//Testing for spaces
-		if(s.indexOf(" ") != 0) {
-			hasSpace = true;
-		}
-		
-		//Testing for numbers
-	    for (int i = 0; i>s.length()-1; i++) {
-	    	s.contains("1");
-	    	while(s.length()>0) {
-	    		s.replace("num", "2");
-	    	}
-	    }
-	    
-		//Testing for upper and lower case letters
-		
-		
-		//Final boolean tests
-		
-		if(hasEnoughChars == true && hasSpace == false && hasNum == true && hasUpperAndLower == true) {
-			result = true;
-		}
+		 for(int i =0; i < s.length(); i++) {
+	            char ch = s.charAt(i);
+	            if(Character.isWhitespace(ch)) {
+	                spaces++;
+	            }
+	            else if(Character.isLetter(ch)) {
+	                chars++;
+	                if(Character.isUpperCase(ch)) {
+	                    upperCount++;
+	                }
+	                else if(Character.isLowerCase(ch)) {
+	                    lowerCount++;
+	                }
+	            }
+	            else if(Character.isDigit(ch)) {
+	                digits++;
+	            }
+	        }
+		 
+	        if(spaces< 1) {
+	            if(chars >= 7) {
+	                if(lowerCount > 0 && upperCount > 0) {
+	                    if(digits > 0) {
+	                        result = true;
+	                    }
+	                }
+	            }
+	        }
 		
 		return result;
 	}

@@ -64,8 +64,8 @@ public class StringToolBoxTester {
 		
 		//Added Part 3 tester, For method functional testing, menu is final tester
 		
-		System.out.println("*****Testing: String caesar(String s)");
-		System.out.println("Ymj udlrd mnuut nx f wjhqzxnaj fsi sthyzwsfq fsnrfq sfynaj yt Bjxyjws Fkwnhf = " + stringTool.caesar("The pygmy hippo is a reclusive and nocturnal animal native to Western Africa”"));
+		System.out.println("*****Testing: String caesar(String s, int n)");
+		System.out.println("Ymj udlrd mnuut nx f wjhqzxnaj fsi sthyzwsfq fsnrfq sfynaj yt Bjxyjws Fkwnhf = " + stringTool.caesar("The pygmy hippo is a reclusive and nocturnal animal native to Western Africa", 5));
 		
 		System.out.println("*****Testing: boolean isPalindrome(String s)");
 		System.out.println("true = " + stringTool.isPalindrome("racecar"));
