@@ -118,6 +118,11 @@ public class Fraction
   {
     return num + "/" + denom;
   }
+  
+  public double toDecimal(int num, int denom) {
+	double result = num/denom;
+	return result;
+  }
 
   // *** private methods ***
 

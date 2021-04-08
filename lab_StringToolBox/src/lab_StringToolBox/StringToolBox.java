@@ -245,9 +245,18 @@ public class StringToolBox {
 		return result;
 	}
 	
-	public boolean passwordEncrypter(String s) {
-		boolean result = false;
-		
+	//Tests what type of emotional sentence the input is
+	public String typeOfSentence(String s) {
+		String result = "";
+		if(s.endsWith("?")) {
+			result = "Question???";
+		}
+		if(s.endsWith("!")) { 
+			result = "Exclamation, excitement or anger!";
+		}
+		if(s.endsWith(".")) {
+			result = "statememt, plain and simple.";
+		}
 		return result;
 	}
 }
