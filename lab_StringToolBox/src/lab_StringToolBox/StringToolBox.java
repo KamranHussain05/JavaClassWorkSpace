@@ -145,10 +145,13 @@ public class StringToolBox {
 		String comment = "";
 		String test = s;
 		
-		if(test.contains("/*")) {
-			comment = s.substring(s.indexOf("/*"), s.lastIndexOf("/*")+2);
-			result = s.replace(comment, "");
-		} else return s;
+		if(test.contains("/*")||test.contains("*/")) {
+			while (test.contains("/*") || test.contains("*/")) {
+				comment = test.substring(test.lastIndexOf("/*"), test.lastIndexOf("*/")+2);
+				result = test.replace(comment, "");
+				test = result;
+			} 
+		} else result = s;
 		
 		return result; 
 	}
@@ -183,17 +186,22 @@ public class StringToolBox {
 	public boolean isPalindrome(String s) {
 		boolean result = false;
 		String reversed = "";
-		String original = s;
+		String noSpaceOriginal = "";
+		String cleanInput = "";
+		
+		cleanInput = s.replace(" ", "").replaceAll("\\p{Punct}", "").toLowerCase();
+		
+		noSpaceOriginal = s.replace(" ", "").replaceAll("\\p{Punct}", "").toLowerCase();
 		
 		StringBuilder reverseChars = new StringBuilder();
-		reverseChars.append(s);
+		reverseChars.append(noSpaceOriginal);
 		reverseChars.reverse();
 		reversed = reverseChars.toString();
-		
-		if(original.equals(reversed)) {
+	
+		if(cleanInput.equals(reversed)) {
 			result = true;
-		}
-		
+		} 
+
 		return result;
 	}
 	

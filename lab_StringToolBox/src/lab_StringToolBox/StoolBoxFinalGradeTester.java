@@ -331,7 +331,7 @@ public class StoolBoxFinalGradeTester {
 			System.out.println("PASS");
 		
 		System.out.println("Lttlqj ltllqjx ljjpd lqfxxjx = " + stringToolBox.caesar("Google goggles geeky glasses",5));
-		if (!stringToolBox.caesar("Google goggles geeky glasses",5).equals("Lttlqj ltllqjx ljjpd lqfxxjx")) {
+		if (!stringToolBox.caesar("Google goggles geeky glasses", 5).equals("Lttlqj ltllqjx ljjpd lqfxxjx")) {
 			System.out.println("FAIL");
 			failCount ++;
 		} 
@@ -340,7 +340,7 @@ public class StoolBoxFinalGradeTester {
 		
 		
 		System.out.println("Gur cltzl uvccb vf n erpyhfvir naq abpgheany navzny angvir gb Jrfgrea Nsevpn. = " + stringToolBox.caesar("The pygmy hippo is a reclusive and nocturnal animal native to Western Africa.",13));
-		if (!stringToolBox.caesar("The pygmy hippo is a reclusive and nocturnal animal native to Western Africa.",13).equals("Gur cltzl uvccb vf n erpyhfvir naq abpgheany navzny angvir gb Jrfgrea Nsevpn.")) {
+		if (!stringToolBox.caesar("The pygmy hippo is a reclusive and nocturnal animal native to Western Africa.", 13).equals("Gur cltzl uvccb vf n erpyhfvir naq abpgheany navzny angvir gb Jrfgrea Nsevpn.")) {
 			System.out.println("FAIL");
 			failCount ++;
 		} 

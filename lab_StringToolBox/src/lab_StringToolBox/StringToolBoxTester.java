@@ -1,5 +1,10 @@
 package lab_StringToolBox;
 
+// Author: Kamran Hussain
+// Date: 3/5/2021
+// Rev 03
+// Notes: 
+
 import java.util.Scanner;
 import lab_StringToolBox.StringToolBox;
 
