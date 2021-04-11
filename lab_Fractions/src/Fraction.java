@@ -26,15 +26,15 @@ public class Fraction
   }
   //***********Added the constructor for inputs that are doubles*********************
   public Fraction(double x) {
-	  denom =1;
-      while ( x != (int)x) {
-          if ( x >= java.lang.Integer.MAX_VALUE/10) {
+	  denom =1; //sets the denominator to 1
+      while ( x != (int)x) { //checks if the input is an integer
+          if ( x >= java.lang.Integer.MAX_VALUE/10) {  //calculates the decimal form of the fraction for the denominator
               break;
           }
           x *= 10;
-          denom *= 10;
+          denom *= 10; //changes the denominator
       }
-      num = (int)x;
+      num = (int)x; //calculates the numerator
   }
 //***********************************************************************************
   public Fraction(int n, int d)
@@ -73,8 +73,9 @@ public class Fraction
     return new Fraction(num + m * denom, denom);
   }
   //*****************Added the subtract method**************************
-  public Fraction subtract(Fraction f) {
-	  int newNum = num * f.denom - denom*f.num;
+  public Fraction subtract(Fraction f) { //subtracts two fractions
+	  int newNum = num * f.denom - denom*f.num; //sets the same denominator for both inputs
+	  
 	  int newDenom = denom * f.denom;
 	  return new Fraction(newNum, newDenom);
   }
@@ -84,33 +85,33 @@ public class Fraction
   }
 //**************************************************************************************************
   // Returns the product of this fraction and other
-  public Fraction multiply(Fraction other)
+  public Fraction multiply(Fraction other) //Multiply's two inputted fractions
   {
-    int newNum = num * other.num;
-    int newDenom = denom * other.denom;
-    return new Fraction(newNum, newDenom);
+    int newNum = num * other.num; //multiplies the numerators
+    int newDenom = denom * other.denom; //multiplies thedenominators
+    return new Fraction(newNum, newDenom); //returns the new fraction
   }
 
   // Returns the product of this fraction and m
   public Fraction multiply(int m)
   {
-    return new Fraction(num * m, denom);
+    return new Fraction(num * m, denom); //multiplies the two numerators because the denominator of m is 1, so it is irrelavent in this equation
   }
   //******************Added the divide method****************************
-  public Fraction divide(Fraction f) {
-	int newNum = num*f.denom;
-	int newDenom = denom * f.num;
-	return new Fraction(newNum, newDenom);
+  public Fraction divide(Fraction f) { //flips the fraction and cross multiplies
+	int newNum = num*f.denom; //multiples the numerator by the other fractions denominator
+	int newDenom = denom * f.num; //multiples the denominator by the other numerator
+	return new Fraction(newNum, newDenom); //returns the resulting fraction
   }
   //*******************Added the second divide method***********************
   public Fraction divide(int m) {
-	return new Fraction(num, denom*m);
+	return new Fraction(num, denom*m); //multiplies the denominator by m because the numerator is 1 which is irrelavent in this equation
   }
 //*************************************************************************************************
   // Returns the value of this fraction as a double
   public double getValue()
   {
-    return (double)num / (double)denom;
+    return (double)num / (double)denom; 
   }
 
   // Returns a string representation of this fraction
@@ -119,9 +120,10 @@ public class Fraction
     return num + "/" + denom;
   }
   
+//********************Research and Development****************************
   public double toDecimal(int num, int denom) {
-	double result = num/denom;
-	return result;
+	double result = num/denom; //divides the numerator by the denominator, turning it into a decimal
+	return result; //returns the new decimal.
   }
 
   // *** private methods ***

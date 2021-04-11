@@ -1,7 +1,7 @@
  // Author: Kamran Hussain
  // Date: 4/6/2021
  // Rev: 01
- // Notes: 
+ // Notes: Research and development took a while but was really simple.
 
 public class LipogramAnalyzer {
     private String text = "";  //initializes the text private field
@@ -38,4 +38,23 @@ public class LipogramAnalyzer {
         }
         return (output);
     }
+    //************Research and Development****************
+    public String wordCount(String input) {  //this method counts the number of characters in the
+    	String result = "";
+    	int wordCount = 0;
+    	String test = input;
+    	
+    	if(input.contains(" ")) { //checks if there are any words
+    		wordCount++;
+			while (test.contains(" ")) {  //counts every space
+				test = test.replaceFirst(" ", ""); //removes every counted space to prevent a miscount
+				wordCount++; //increases the word counter
+			} 
+    	}
+    	
+    	result = "The Word Count is: " + wordCount; //Adds the word count to the uneditable text box and signifies the meaning of the value
+    	
+    	return result; //returns the word count to be printed on the window
+    }
+    
 }

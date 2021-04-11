@@ -8,6 +8,7 @@ public class Lipogrammer extends JFrame
 {
   private JFrame thisWindow;
   private JTextArea original, marked, words;
+  private String wordCount;
   private JButton go;
   private Scanner kboard = new Scanner(System.in);
   private char letter;
@@ -41,7 +42,7 @@ public class Lipogrammer extends JFrame
   {
     String text = original.getText();
     LipogramAnalyzer analyzer = new LipogramAnalyzer(text.toLowerCase());
-    marked.setText(analyzer.mark(letter));
+    marked.setText( analyzer.wordCount(text) + "\n\n" +analyzer.mark(letter)); //Added the word counter to the uneditable text plane 
     words.setText(analyzer.allWordsWith(letter));
   }
  
@@ -80,7 +81,6 @@ public class Lipogrammer extends JFrame
 
     go = new JButton("Refresh");
     go.addActionListener(this);
-
     Box box1 = Box.createVerticalBox();
     box1.add(Box.createVerticalStrut(10));
     box1.add(originalPane);

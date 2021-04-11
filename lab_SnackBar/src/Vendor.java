@@ -12,9 +12,8 @@ public class Vendor
   //  Parameters:
   //    int price of a single item in cents
   //    int number of items to place in stock
-  ... Vendor ...
-  {
-    ...
+  public Vendor(int price, int numItems) {
+	  
   }
 
   //  Sets the quantity of items in stock.

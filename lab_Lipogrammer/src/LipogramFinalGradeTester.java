@@ -348,6 +348,8 @@ public class LipogramFinalGradeTester {
 		else 
 			System.out.println("Word list Test: " + testCount + ": PASS");		
 		
+		System.out.println("Testing wordCount: 12 = " + analyzer05.wordCount("Hello world! this is a test of the word counting expirementation method."));
+		
 		
 		// test summary
 		System.out.println();
