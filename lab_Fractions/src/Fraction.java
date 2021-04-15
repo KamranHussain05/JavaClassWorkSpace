@@ -165,3 +165,41 @@ public class Fraction
       return gcf(n % d, d % n); 
   }
 }
+
+/*
+------Fraction.java TESTER------
+
+Double Constructor 1/B Check
+0.25 = 25/100
+PASS
+
+Double Constructor A/B Check
+0.6666666666666666 = 666666666/1000000000
+PASS
+
+Double Constructor Zero Check
+0.0 = 0/1
+PASS
+
+Subtraction by Fraction Check
+2/3 - 1/4 = 5/12
+PASS
+
+Subtraction by Integer Check
+2/3 - 1 = -1/3
+PASS
+
+Division by Fraction Check
+2/3 / 1/4 = 5/12
+PASS
+
+Division by Integer Check
+2/3 / 2 = 2/6
+PASS
+
+
+*****   TEST SUMMARY     *****
+Tests:          7
+Failed:         0
+Percent passed: 100%
+*/

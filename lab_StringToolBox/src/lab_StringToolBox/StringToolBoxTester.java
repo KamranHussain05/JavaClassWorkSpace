@@ -87,7 +87,7 @@ public class StringToolBoxTester {
 		System.out.println("false = " + stringTool.validPassword("SNOWFLAKE47"));
 		System.out.println("true = " + stringTool.validPassword("snowFlake47"));
 		
-		//MENU
+		//MENU -- started menu but couldn't finish due to time constraints
 //		Scanner kboard = new Scanner(System.in);
 //		StringToolBoxTester output = new StringToolBoxTester();
 //		boolean running = true;

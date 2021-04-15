@@ -272,3 +272,110 @@ public class StringToolBox {
 		return result;
 	}
 }
+
+/* 
+***Testing: boolean endsWithStar(String s)***
+Test Count:   1
+true = true
+PASS
+false = false
+PASS
+***Testing: boolean endsWithTwoStars(String s)***
+Test Count:   2
+true = true
+PASS
+false = false
+PASS
+false = false
+PASS
+***Testing: String removeDashes(String str)***
+Test Count:   3
+123456789 = 123456789
+PASS
+***Testing: String dateStr(String s)***
+Test Count:   4
+10-02-2011 = 10-02-2011
+PASS
+***Testing: ADVANCED CREDIT CONSIDERATION String dateStr(String s)***
+10-02-2010 = 10-02-2010
+PASS
+02-10-2010 = 02-10-2010
+PASS
+02-01-2010 = 02-01-2010
+PASS
+***Testing: String last4(String s)***
+Test Count:   5
+3456 = 3456
+PASS
+***Testing: String last5(String s)***
+Test Count:   6
+23456 = 23456
+PASS
+***Testing: String scroll(String s)***
+Test Count:   7
+23451 = 23451
+PASS
+***Testing: String convertName(String s)***
+Test Count:   8
+Albert Einstein = Albert Einstein
+PASS
+***Testing: String negativeBits(String s)***
+Test Count:   9
+0101 = 0101
+PASS
+1111 0000 = 1111 0000
+PASS
+***Testing: boolean containsSameChar(String s)***
+Test Count:   10
+false = false
+PASS
+true = true
+PASS
+***Testing: String removeComments(String s)***
+Test Count:   11
+The hippo is native to Western Africa. = The hippo is native to Western Africa.
+PASS
+The pygmy hippo is native to Western Africa. = The pygmy hippo is native to Western Africa.
+PASS
+The hippo is native to Western Africa. = The hippo is native to Western Africa.
+PASS
+The hippo is native to Western Africa. = The hippo is native to Western Africa.
+PASS
+***Testing: String caesar(String s, int n)***
+Test Count:   12
+lttlqj ltllqjx ljjp lqfxxjx = lttlqj ltllqjx ljjp lqfxxjx
+PASS
+Lttlqj ltllqjx ljjpd lqfxxjx = Lttlqj ltllqjx ljjpd lqfxxjx
+PASS
+Gur cltzl uvccb vf n erpyhfvir naq abpgheany navzny angvir gb Jrfgrea Nsevpn. = Gur cltzl uvccb vf n erpyhfvir naq abpgheany navzny angvir gb Jrfgrea Nsevpn.
+PASS
+***Testing: boolean isPalindrome(String s)***
+Test Count:   13
+true = true
+PASS
+false = false
+PASS
+true = true
+PASS
+false = false
+PASS
+true = true
+PASS
+***Testing: boolean validPassword(String s)***
+Test Count:   14
+false = false
+PASS
+false = false
+PASS
+true = true
+PASS
+true = true
+PASS
+****** TEST SUMMARY *****
+Test Count:   14
+Fail Count:   0
+Percent Pass: 100
+Total Points: 10
+EC points:    1
+Earned Points:11
+*/
