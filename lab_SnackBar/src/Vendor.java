@@ -6,7 +6,8 @@
 public class Vendor
 {
   // Fields:
-  ...
+  private int stock;
+  private int deposit;
 
   //  Constructor
   //  Parameters:
@@ -21,9 +22,9 @@ public class Vendor
   //    int number of items to place in stock
   //  Return:
   //    None
-  ... setStock ...
-  {
-    ...
+  public int setStock(int restock) {
+	stock = restock;
+	return stock;	  
   }
 
   //  Returns the number of items currently in stock.
@@ -31,9 +32,8 @@ public class Vendor
   //    None
   //  Return:
   //    int number of items currently in stock
-  ... getStock ...
-  {
-    ...
+  public int getStock() {
+   return stock;
   }
 
   //  Adds a specified amount (in cents) to the deposited amount.
@@ -41,9 +41,8 @@ public class Vendor
   //    int number of cents to add to the deposit
   //  Return:
   //    None
-  ... addMoney ...
-  {
-    ...
+  public void addMoney(int cents) {
+	  
   }
 
   //  Returns the currently deposited amount (in cents).
@@ -51,9 +50,8 @@ public class Vendor
   //    None
   //  Return:
   //    int number of cents in the current deposit
-  ... getDeposit ...
-  {
-    ...
+  public int getDeposit() {
+	return deposit;  
   }
 
   //  Implements a sale.  If there are items in stock and
@@ -66,9 +64,9 @@ public class Vendor
   //    None
   //  Return:
   //    boolean successful sale (true) or failure (false)
-  ... makeSale ...
-  {
-    ...
+  public boolean makeSale() {
+	  
+	  return false;
   }
 
   //  Returns and zeroes out the amount of change (from the last
@@ -77,8 +75,8 @@ public class Vendor
   //    None
   //  Return:
   //    int number of cents in the current change
-  ... getChange ...
-  {
-    ...
+  public int getChange() {
+	  
+	  return 0;
   }
 }

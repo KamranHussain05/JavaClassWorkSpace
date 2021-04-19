@@ -2,7 +2,7 @@
 public class CarController
 {
 
-   public static void main(String[] args)
+   public static void main(String[] poop)
    {
       // working with the basic model
       
@@ -22,6 +22,7 @@ public class CarController
       System.out.println("Controller stopping car");
       car1.stop(); // stopping the car
       
+      @SuppressWarnings("unused")
       String name = car1.myMoveState;
       car1.myMoveState = "whatever...";
       System.out.println(car1.getCarName() + " move state is " + car1.getMoveState());

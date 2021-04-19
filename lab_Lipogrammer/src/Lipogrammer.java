@@ -16,7 +16,7 @@ public class Lipogrammer extends JFrame
   // Constructor
   public Lipogrammer()
   {
-    super("Lipogrammer");
+    super("Lipogrammer Applet");
     thisWindow = this;
 
     setJMenuBar(new LipogrammerMenu(this));
