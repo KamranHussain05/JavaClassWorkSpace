@@ -14,6 +14,7 @@ public class Vendor
   //    int price of a single item in cents
   //    int number of items to place in stock
   public Vendor(int price, int numItems) {
+	  stock = numItems;
 	  
   }
 
