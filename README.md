@@ -1,3 +1,3 @@
 # JavaClassWorkSpace
-#All labs and lessons from Java intro class 2020-2021 at Homestead High
-#Coded in java with Eclipse IDE
+# All labs and lessons from intro to programming in Java at Homestead High School. This class was focused on object oriented programming concepts using the forced OOP in Java
+# Lab assignments are excluded from the repository, only source code.
